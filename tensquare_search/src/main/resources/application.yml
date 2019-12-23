@@ -1,0 +1,22 @@
+server: 
+  port: 9007
+spring: 
+  application:  
+    name: tensquare-search #指定服务名
+  data:
+    elasticsearch:
+      cluster-nodes: 127.0.0.1:9300
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.10.10:3306/tensquare_qa?characterEncoding=UTF8
+    username: root
+    password: 123456
+  jpa:
+    database: MySQL
+    show-sql: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:6868/eureka
+ instance:
+    prefer-ip-address: true
